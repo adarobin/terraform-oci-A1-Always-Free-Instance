@@ -1,6 +1,7 @@
 variable "ocpus" {
-  type    = number
-  default = 1
+  description = "The number of OCPUs to assign to the instance. Must be between 1 and 4."
+  type        = number
+  default     = 1
 
   validation {
     condition     = var.ocpus >= 1
@@ -14,11 +15,12 @@ variable "ocpus" {
 }
 
 variable "memory_in_gbs" {
-  default = 6
+  description = "The amount of memory in GB to assign to the instance. Must be between 1 and 24."
+  default     = 6
 
   validation {
-    condition     = var.memory_in_gbs >= 6
-    error_message = "The value of memory_in_gbs must be greater than or equal to 6."
+    condition     = var.memory_in_gbs >= 1
+    error_message = "The value of memory_in_gbs must be greater than or equal to 1."
   }
 
   validation {
@@ -28,7 +30,8 @@ variable "memory_in_gbs" {
 }
 
 variable "boot_volume_size_in_gbs" {
-  default = null
+  description = "A custom size for the boot volume. Must be between 50 and 200. If not set, defaults to the size of the image which is around 46 GB."
+  default     = null
 
   validation {
     condition     = var.boot_volume_size_in_gbs == null ? true : var.boot_volume_size_in_gbs >= 50
@@ -41,20 +44,24 @@ variable "boot_volume_size_in_gbs" {
   }
 }
 
-variable "name" {
-  type = string
+variable "hostname" {
+  description = "The hostname of the instance."
+  type        = string
 }
 
 variable "compartment_id" {
-  type = string
+  description = "The OCID of the compartment containing the instance."
+  type        = string
 }
 
 variable "availability_domain" {
-  type = string
+  description = "The availability domain of the instance."
+  type        = string
 }
 
 variable "operating_system" {
-  type = string
+  description = "The Operating System of the platform image to use. Valid values are \"Canonical Ubuntu\", \"CentOS\", \"Oracle Autonomous Linux\", \"Oracle Linux\", or \"Oracle Linux Cloud Developer\""
+  type        = string
 
   validation {
     condition     = contains(["Canonical Ubuntu", "Oracle Linux", "Oracle Linux Cloud Developer"], var.operating_system)
@@ -63,18 +70,22 @@ variable "operating_system" {
 }
 
 variable "operating_system_version" {
-  type = string
+  description = "The version of the Operating System specified in `operating_system`."
+  type        = string
 }
 
 variable "subnet_id" {
-  type = string
+  description = "The OCID of the subnet to create the VNIC in."
+  type        = string
 }
 
 variable "ssh_authorized_keys" {
-  type = string
+  description = "The public SSH key(s) that should be authorized for the default user."
+  type        = string
 }
 
 variable "user_data" {
-  type    = string
-  default = null
+  description = "User data passed to cloud-init when the instance is started. Defaults to `null`."
+  type        = string
+  default     = null
 }

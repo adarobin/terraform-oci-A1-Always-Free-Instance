@@ -10,7 +10,7 @@ data "oci_core_images" "os" {
 resource "oci_core_instance" "a1" {
   availability_domain = var.availability_domain
   compartment_id      = var.compartment_id
-  display_name        = var.name
+  display_name        = var.hostname
   shape               = "VM.Standard.A1.Flex"
 
   shape_config {
@@ -19,7 +19,7 @@ resource "oci_core_instance" "a1" {
   }
 
   create_vnic_details {
-    hostname_label = var.name
+    hostname_label = var.hostname
     subnet_id      = var.subnet_id
   }
 
