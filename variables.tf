@@ -1,6 +1,6 @@
 variable "ocpus" {
   type    = number
-  default = 4
+  default = 1
 
   validation {
     condition     = var.ocpus >= 1
