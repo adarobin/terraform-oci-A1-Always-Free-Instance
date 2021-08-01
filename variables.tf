@@ -89,3 +89,9 @@ variable "user_data" {
   type        = string
   default     = null
 }
+
+variable "assign_public_ip" {
+  description = "Whether or not a public IP should be assigned to the instance.  Defaults to `null` which assigns a public IP based on whether the subnet is public or private. The Free Tier only includes 2 public IP addresses so you may need to set this to `false`."
+  type        = bool
+  default     = null
+}
