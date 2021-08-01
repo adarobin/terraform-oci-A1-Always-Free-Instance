@@ -34,4 +34,3 @@ resource "oci_core_instance" "a1" {
     user_data           = var.user_data
   }
 }
-
