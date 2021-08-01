@@ -69,3 +69,12 @@ variable "operating_system_version" {
 variable "subnet_id" {
   type = string
 }
+
+variable "ssh_authorized_keys" {
+  type = string
+}
+
+variable "user_data" {
+  type    = string
+  default = null
+}

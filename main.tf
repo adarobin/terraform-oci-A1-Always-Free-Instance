@@ -28,5 +28,10 @@ resource "oci_core_instance" "a1" {
     source_id               = data.oci_core_images.os.images[0].id
     boot_volume_size_in_gbs = var.boot_volume_size_in_gbs
   }
+
+  metadata = {
+    ssh_authorized_keys = var.ssh_authorized_keys
+    user_data           = var.user_data
+  }
 }
 
