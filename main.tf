@@ -1,7 +1,7 @@
-data "oci_core_images" "oracle_linux_8" {
+data "oci_core_images" "os" {
   compartment_id           = var.compartment_id
-  operating_system         = "Oracle Linux"
-  operating_system_version = "8"
+  operating_system         = var.operating_system
+  operating_system_version = var.operating_system_version
   shape                    = "VM.Standard.A1.Flex"
   sort_by                  = "TIMECREATED"
   sort_order               = "DESC"
@@ -25,7 +25,7 @@ resource "oci_core_instance" "a1" {
 
   source_details {
     source_type             = "image"
-    source_id               = data.oci_core_images.oracle_linux_8.images[0].id
+    source_id               = data.oci_core_images.os.images[0].id
     boot_volume_size_in_gbs = var.boot_volume_size_in_gbs
   }
 }
