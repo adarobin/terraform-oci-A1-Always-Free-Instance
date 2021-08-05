@@ -53,6 +53,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_instance_id"></a> [instance\_id](#output\_instance\_id) | The OCID of the instance that was created |
 | <a name="output_private_ip"></a> [private\_ip](#output\_private\_ip) | The private IP address assigned to the instance. |
 | <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | The public IP address assigned to the instance. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
