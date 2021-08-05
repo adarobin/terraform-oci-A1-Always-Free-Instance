@@ -60,7 +60,7 @@ variable "availability_domain" {
 }
 
 variable "operating_system" {
-  description = "The Operating System of the platform image to use. Valid values are \"Canonical Ubuntu\", \"CentOS\", \"Oracle Autonomous Linux\", \"Oracle Linux\", or \"Oracle Linux Cloud Developer\""
+  description = "The Operating System of the platform image to use. Valid values are \"Canonical Ubuntu\", \"Oracle Linux\", or \"Oracle Linux Cloud Developer\"."
   type        = string
 
   validation {
