@@ -22,6 +22,7 @@ resource "oci_core_instance" "a1" {
     hostname_label   = var.hostname
     subnet_id        = var.subnet_id
     assign_public_ip = var.assign_public_ip
+    nsg_ids          = var.nsg_ids
   }
 
   source_details {

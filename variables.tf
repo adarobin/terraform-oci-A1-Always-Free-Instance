@@ -101,3 +101,9 @@ variable "assign_ipv6_address" {
   type        = bool
   default     = false
 }
+
+variable "nsg_ids" {
+  description = "A list of Network Security Group OCIDs to attach to the primary vnic."
+  type        = list(string)
+  default     = []
+}
