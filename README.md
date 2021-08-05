@@ -30,12 +30,15 @@ No modules.
 | Name | Type |
 |------|------|
 | [oci_core_instance.a1](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance) | resource |
+| [oci_core_ipv6.ipv6_address](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_ipv6) | resource |
 | [oci_core_images.os](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_images) | data source |
+| [oci_core_vnic_attachments.a1_vnic_attachments](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_vnic_attachments) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_assign_ipv6_address"></a> [assign\_ipv6\_address](#input\_assign\_ipv6\_address) | Whether or not an IPv6 address should be assigned to the instance. Requires a subnet with IPv6 enabled. Defaults to `false`. | `bool` | `false` | no |
 | <a name="input_assign_public_ip"></a> [assign\_public\_ip](#input\_assign\_public\_ip) | Whether or not a public IP should be assigned to the instance.  Defaults to `null` which assigns a public IP based on whether the subnet is public or private. The Free Tier only includes 2 public IP addresses so you may need to set this to `false`. | `bool` | `null` | no |
 | <a name="input_availability_domain"></a> [availability\_domain](#input\_availability\_domain) | The availability domain of the instance. | `string` | n/a | yes |
 | <a name="input_boot_volume_size_in_gbs"></a> [boot\_volume\_size\_in\_gbs](#input\_boot\_volume\_size\_in\_gbs) | A custom size for the boot volume. Must be between 50 and 200. If not set, defaults to the size of the image which is around 46 GB. | `any` | `null` | no |
@@ -54,6 +57,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_instance_id"></a> [instance\_id](#output\_instance\_id) | The OCID of the instance that was created |
+| <a name="output_ipv6_address"></a> [ipv6\_address](#output\_ipv6\_address) | The IPv6 address assigned to the instance. |
 | <a name="output_private_ip"></a> [private\_ip](#output\_private\_ip) | The private IP address assigned to the instance. |
 | <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | The public IP address assigned to the instance. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

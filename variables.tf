@@ -95,3 +95,9 @@ variable "assign_public_ip" {
   type        = bool
   default     = null
 }
+
+variable "assign_ipv6_address" {
+  description = "Whether or not an IPv6 address should be assigned to the instance. Requires a subnet with IPv6 enabled. Defaults to `false`."
+  type        = bool
+  default     = false
+}
