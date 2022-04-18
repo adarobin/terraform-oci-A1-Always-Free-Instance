@@ -29,10 +29,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [oci_core_instance.a1](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance) | resource |
-| [oci_core_ipv6.ipv6_address](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_ipv6) | resource |
-| [oci_core_images.os](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_images) | data source |
-| [oci_core_vnic_attachments.a1_vnic_attachments](https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_vnic_attachments) | data source |
+| [oci_core_instance.a1](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_instance) | resource |
+| [oci_core_ipv6.ipv6_address](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_ipv6) | resource |
+| [oci_core_images.os](https://registry.terraform.io/providers/oracle/oci/latest/docs/data-sources/core_images) | data source |
+| [oci_core_vnic_attachments.a1_vnic_attachments](https://registry.terraform.io/providers/oracle/oci/latest/docs/data-sources/core_vnic_attachments) | data source |
 
 ## Inputs
 
