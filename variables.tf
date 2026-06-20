@@ -9,8 +9,8 @@ variable "ocpus" {
   }
 
   validation {
-    condition     = var.ocpus <= 4
-    error_message = "The value of ocpus must be less than or equal to 4 to remain in the free tier."
+    condition     = var.ocpus <= 2
+    error_message = "The value of ocpus must be less than or equal to 2 to remain in the free tier."
   }
 }
 
@@ -24,8 +24,8 @@ variable "memory_in_gbs" {
   }
 
   validation {
-    condition     = var.memory_in_gbs <= 24
-    error_message = "The value of memory_in_gbs must be less than or equal to 24 to remain in the free tier."
+    condition     = var.memory_in_gbs <= 12
+    error_message = "The value of memory_in_gbs must be less than or equal to 12 to remain in the free tier."
   }
 }
 
@@ -60,12 +60,12 @@ variable "availability_domain" {
 }
 
 variable "operating_system" {
-  description = "The Operating System of the platform image to use. Valid values are \"Canonical Ubuntu\", \"Oracle Linux\", or \"Oracle Linux Cloud Developer\"."
+  description = "The Operating System of the platform image to use. Valid values are \"Canonical Ubuntu\", \"Oracle Linux\", \"Oracle Linux Cloud Developer\", or \"Oracle Linux STIG\"."
   type        = string
 
   validation {
-    condition     = contains(["Canonical Ubuntu", "Oracle Linux", "Oracle Linux Cloud Developer"], var.operating_system)
-    error_message = "The value of operating_system must be one of \"Canonical Ubuntu\", \"Oracle Linux\", or \"Oracle Linux Cloud Developer\"."
+    condition     = contains(["Canonical Ubuntu", "Oracle Linux", "Oracle Linux Cloud Developer", "Oracle Linux STIG"], var.operating_system)
+    error_message = "The value of operating_system must be one of \"Canonical Ubuntu\", \"Oracle Linux\", \"Oracle Linux Cloud Developer\", or \"Oracle Linux STIG\"."
   }
 }
 
