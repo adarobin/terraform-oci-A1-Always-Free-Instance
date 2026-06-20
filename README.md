@@ -11,15 +11,15 @@ other instances could be using some of the Always Free allocation.
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_oci"></a> [oci](#requirement\_oci) | >=4.37.0 |
+| <a name="requirement_oci"></a> [oci](#requirement\_oci) | >=8.13.0 |
 
 ## Providers
 
 | Name | Version |
-|------|---------|
-| <a name="provider_oci"></a> [oci](#provider\_oci) | >=4.37.0 |
+| ---- | ------- |
+| <a name="provider_oci"></a> [oci](#provider\_oci) | >=8.13.0 |
 
 ## Modules
 
@@ -28,7 +28,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [oci_core_instance.a1](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_instance) | resource |
 | [oci_core_ipv6.ipv6_address](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_ipv6) | resource |
 | [oci_core_images.os](https://registry.terraform.io/providers/oracle/oci/latest/docs/data-sources/core_images) | data source |
@@ -37,7 +37,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_assign_ipv6_address"></a> [assign\_ipv6\_address](#input\_assign\_ipv6\_address) | Whether or not an IPv6 address should be assigned to the instance. Requires a subnet with IPv6 enabled. Defaults to `false`. | `bool` | `false` | no |
 | <a name="input_assign_public_ip"></a> [assign\_public\_ip](#input\_assign\_public\_ip) | Whether or not a public IP should be assigned to the instance.  Defaults to `null` which assigns a public IP based on whether the subnet is public or private. The Free Tier only includes 2 public IP addresses so you may need to set this to `false`. | `bool` | `null` | no |
 | <a name="input_availability_domain"></a> [availability\_domain](#input\_availability\_domain) | The availability domain of the instance. | `string` | n/a | yes |
@@ -56,7 +56,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_instance_id"></a> [instance\_id](#output\_instance\_id) | The OCID of the instance that was created |
 | <a name="output_ipv6_address"></a> [ipv6\_address](#output\_ipv6\_address) | The IPv6 address assigned to the instance. |
 | <a name="output_private_ip"></a> [private\_ip](#output\_private\_ip) | The private IP address assigned to the instance. |

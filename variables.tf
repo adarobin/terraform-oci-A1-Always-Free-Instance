@@ -9,8 +9,8 @@ variable "ocpus" {
   }
 
   validation {
-    condition     = var.ocpus <= 4
-    error_message = "The value of ocpus must be less than or equal to 4 to remain in the free tier."
+    condition     = var.ocpus <= 2
+    error_message = "The value of ocpus must be less than or equal to 2 to remain in the free tier."
   }
 }
 
@@ -24,8 +24,8 @@ variable "memory_in_gbs" {
   }
 
   validation {
-    condition     = var.memory_in_gbs <= 24
-    error_message = "The value of memory_in_gbs must be less than or equal to 24 to remain in the free tier."
+    condition     = var.memory_in_gbs <= 12
+    error_message = "The value of memory_in_gbs must be less than or equal to 12 to remain in the free tier."
   }
 }
 
