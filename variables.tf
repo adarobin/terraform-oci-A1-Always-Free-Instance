@@ -60,12 +60,12 @@ variable "availability_domain" {
 }
 
 variable "operating_system" {
-  description = "The Operating System of the platform image to use. Valid values are \"Canonical Ubuntu\", \"Oracle Linux\", or \"Oracle Linux Cloud Developer\"."
+  description = "The Operating System of the platform image to use. Valid values are \"Canonical Ubuntu\", \"Oracle Linux\", \"Oracle Linux Cloud Developer\", or \"Oracle Linux STIG\"."
   type        = string
 
   validation {
-    condition     = contains(["Canonical Ubuntu", "Oracle Linux", "Oracle Linux Cloud Developer"], var.operating_system)
-    error_message = "The value of operating_system must be one of \"Canonical Ubuntu\", \"Oracle Linux\", or \"Oracle Linux Cloud Developer\"."
+    condition     = contains(["Canonical Ubuntu", "Oracle Linux", "Oracle Linux Cloud Developer", "Oracle Linux STIG"], var.operating_system)
+    error_message = "The value of operating_system must be one of \"Canonical Ubuntu\", \"Oracle Linux\", \"Oracle Linux Cloud Developer\", or \"Oracle Linux STIG\"."
   }
 }
 

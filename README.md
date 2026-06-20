@@ -7,7 +7,7 @@ This module attempts to limit inputs to valid values for the Always Free instanc
 Use of this module does not guarantee usage falls within the Always Free tier. For example,
 other instances could be using some of the Always Free allocation.
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -47,7 +47,7 @@ No modules.
 | <a name="input_memory_in_gbs"></a> [memory\_in\_gbs](#input\_memory\_in\_gbs) | The amount of memory in GB to assign to the instance. Must be between 1 and 24. | `number` | `6` | no |
 | <a name="input_nsg_ids"></a> [nsg\_ids](#input\_nsg\_ids) | A list of Network Security Group OCIDs to attach to the primary vnic. | `list(string)` | `[]` | no |
 | <a name="input_ocpus"></a> [ocpus](#input\_ocpus) | The number of OCPUs to assign to the instance. Must be between 1 and 4. | `number` | `1` | no |
-| <a name="input_operating_system"></a> [operating\_system](#input\_operating\_system) | The Operating System of the platform image to use. Valid values are "Canonical Ubuntu", "Oracle Linux", or "Oracle Linux Cloud Developer". | `string` | n/a | yes |
+| <a name="input_operating_system"></a> [operating\_system](#input\_operating\_system) | The Operating System of the platform image to use. Valid values are "Canonical Ubuntu", "Oracle Linux", "Oracle Linux Cloud Developer", or "Oracle Linux STIG". | `string` | n/a | yes |
 | <a name="input_operating_system_version"></a> [operating\_system\_version](#input\_operating\_system\_version) | The version of the Operating System specified in `operating_system`. | `string` | n/a | yes |
 | <a name="input_ssh_authorized_keys"></a> [ssh\_authorized\_keys](#input\_ssh\_authorized\_keys) | The public SSH key(s) that should be authorized for the default user. | `string` | n/a | yes |
 | <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | The OCID of the subnet to create the VNIC in. | `string` | n/a | yes |
@@ -61,4 +61,4 @@ No modules.
 | <a name="output_ipv6_address"></a> [ipv6\_address](#output\_ipv6\_address) | The IPv6 address assigned to the instance. |
 | <a name="output_private_ip"></a> [private\_ip](#output\_private\_ip) | The private IP address assigned to the instance. |
 | <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | The public IP address assigned to the instance. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->
